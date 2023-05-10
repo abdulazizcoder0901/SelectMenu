@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: rgb(139, 200, 253);
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-menu{
+    position: relative;
+    width: 300px;
+    cursor: pointer;
+}
+
+.select{
+    background: #111222;
+    padding: 15px;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 5px;
+    display: flex;
+    letter-spacing: 1px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.options-list{
+    position: absolute;
+    width: 100%;
+    background: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 0 20px;
+    max-height: 180px;
+    height: 0;
+    overflow-y: auto;
+    transition: .4s linear .2s;
+}
+
+.option{
+    padding: 8px 0;
+    font-weight: 500;
+    font-size: 15px;
+    transition: .3s ease-in-out;
+}
+
+.option:hover,
+.option.selected{
+    color: #00a8ff;
+}
+
+.options-list::-webkit-scrollbar{
+    width: 5px;
+    background-color: aliceblue;
+}
+
+.options-list::-webkit-scrollbar-thumb{
+    background-color: #00a8ff;
+}
+
+.options-list.active{
+    height: 180px;
+}
